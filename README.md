@@ -24,7 +24,7 @@
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/JLox.git
+    git clone https://github.com/alikhan410/jLox.git
     cd JLox
     ```
 
@@ -37,7 +37,7 @@
 3. Run the interpreter:
 
     ```bash
-    java -cp bin com.lox.Main
+    java -cp bin com.lox.Lox
     ```
 
 ### Running Tests
