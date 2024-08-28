@@ -17,7 +17,6 @@
 ### Prerequisites
 
 - **Java Development Kit (JDK):** Version 8 or higher
-- **Maven:** For managing dependencies (optional)
 
 ### Installation
 
