@@ -1,7 +1,3 @@
-Sure! Here's a GitHub README template for your JLox project:
-
----
-
 # JLox - Java Interpreter (In Progress)
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
