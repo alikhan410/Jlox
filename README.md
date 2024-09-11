@@ -42,13 +42,13 @@
 2. Compile the project:
 
     ```bash
-    javac -d bin src/com/lox/*.java
+    javac -encoding UTF-8 -d bin src/com/lox/*.java
     ```
 
-3. Run the interpreter:
+3. Run the interpreter with test file:
 
     ```bash
-    java -cp bin com.lox.Lox
+    java -cp bin src.com.lox.Lox code.lox   
     ```
 
 ### Running Tests
