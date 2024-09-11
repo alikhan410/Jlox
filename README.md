@@ -1,4 +1,4 @@
-# JLox - Java Interpreter (In Progress)
+# JLox - Java Interpreter
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
