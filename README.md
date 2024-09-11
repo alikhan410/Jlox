@@ -51,41 +51,124 @@
     java -cp bin src.com.lox.Lox code.lox   
     ```
 
-### Running Tests
 
-To be added.
 
-## Project Structure
+# Lox Language Guide
 
+## Basic Syntax
+
+### Variables
+
+In Lox, you can declare variables using the `var` keyword. Lox supports dynamic typing, so you don’t need to specify the type of the variable.
+
+```lox
+// Declaring and initializing variables
+var name = "Alice";
+var age = 30;
+
+// Printing variables
+print name; // Output: Alice
+print age;  // Output: 30
 ```
-lox/
-│
-├── .idea/
-├── out/
-├── src/
-│   └── com/
-│       └── lox/
-│           ├── tool/
-│           │   └── GenerateAst.java
-│           ├── Environment.java
-│           ├── Expr.java
-│           ├── Interpreter.java
-│           ├── Lox.java
-│           ├── LoxCallable.java
-│           ├── LoxClass.java
-│           ├── LoxFunction.java
-│           ├── LoxInstance.java
-│           ├── Parser.java
-│           ├── Resolver.java
-│           ├── Return.java
-│           ├── RuntimeError.java
-│           ├── Scanner.java
-│           ├── Stmt.java
-│           ├── Token.java
-│           └── TokenType.java
-├── .gitignore
-├── code.lox
-└── README.md
+
+### Functions
+
+Functions in Lox are defined using the `fun` keyword. Functions can take parameters and return values.
+
+```lox
+// Defining a function
+fun greet(name) {
+    print "Hello, " + name + "!";
+}
+
+// Calling the function
+greet("Bob"); // Output: Hello, Bob!
+```
+
+### Classes
+
+Lox supports object-oriented programming with classes. You can define classes and create instances of them.
+
+```lox
+// Defining a class
+class Person {
+    // Constructor
+    init(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Method
+    greet() {
+        print "Hi, I'm " + this.name + " and I'm " + this.age + " years old.";
+    }
+}
+
+// Creating an instance of the class
+var person = Person("Charlie", 25);
+person.greet(); // Output: Hi, I'm Charlie and I'm 25 years old.
+```
+
+### Control Flow
+
+Lox supports standard control flow statements like `if`, `else`, and `while`.
+
+```lox
+// Using if-else statements
+var number = 10;
+
+if (number > 0) {
+    print "Number is positive.";
+} else {
+    print "Number is not positive.";
+}
+
+// Using while loop
+var i = 0;
+while (i < 5) {
+    print i;
+    i = i + 1;
+}
+```
+
+## Example Script
+
+Here is a complete example script demonstrating variables, functions, and classes:
+
+```lox
+// example.lox
+
+// Variables
+var greeting = "Hello";
+var count = 3;
+
+// Function
+fun repeatMessage(message, times) {
+    var result = "";
+    while (times > 0) {
+        result = result + message + " ";
+        times = times - 1;
+    }
+    return result;
+}
+
+// Class
+class Animal {
+    init(name) {
+        this.name = name;
+    }
+
+    speak() {
+        print this.name + " says: Woof!";
+    }
+}
+
+// Using the function
+print repeatMessage(greeting, count); // Output: Hello Hello Hello 
+
+// Using the class
+var dog = Animal("Buddy");
+dog.speak(); // Output: Buddy says: Woof!
 ```
 
 ## Contributing
